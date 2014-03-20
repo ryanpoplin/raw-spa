@@ -28,9 +28,13 @@ var spa = (function($) {
 			template_html : '<div class="spa-slider"><\/div>'
 		},
 		// Declare all other module scope variables
+		//
 		$chatSlider,
+		//
 		toggleSlider,
+		//
 		onClickSlider,
+		//
 		initModule
 	;
 	// DOM method /toggleSlider/
@@ -53,7 +57,8 @@ var spa = (function($) {
 	// Event handler /onClickSlider/
 	// receives click event and calls toggleSlider
 	//
-	onClickSlider = function(event) {
+	// Understand the events
+	onClickSlider = function( event ) {
 		toggleSlider();
 		return false;
 	};
@@ -63,18 +68,19 @@ var spa = (function($) {
 	initModule = function($container) { 
 		// render HTML
 		$container.html( configMap.template_html );
+		// $chatSlider === top of functional scope
 		$chatSlider = $container.find( '.spa-slider' );
 		// initialize slider height and title
 		// bind the user click event to the event handler 
 		$chatSlider.attr( 'title', configMap.retracted_title ).click( onClickSlider );
+			// Understand the events
 		return true;
 	};
 	return { initModule : initModule };
 }(jQuery));
 // Start the spa once the DOM is ready
 //
-jQuery(document).ready(
-	function() { 
+jQuery(document).ready(function() { 
+		// spa module
 		spa.initModule( jQuery('#spa') ); 
-	}
-);
+});

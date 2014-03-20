@@ -1,0 +1,7 @@
+HTML, CSS, and JavaScript...
+
+It's all you'll need to develop awesome future-proof applications.
+
+With technologies such as Node.js, NoSQL DB's, and MV* methodologies, libraries and frameworks: JavaScript can do everything you'd ever need (or be able) to do.
+
+Here we go... 
